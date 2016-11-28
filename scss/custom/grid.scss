@@ -1,0 +1,13 @@
+
+.grid {
+  display: block;
+  list-style: none;
+  display: flex;
+
+  &__col {
+    display: block;
+    min-height: 200px;
+    background-color: grey;
+    border: 2px solid white;
+  }
+}
