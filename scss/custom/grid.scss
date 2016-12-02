@@ -1,13 +1,266 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
 .grid {
-  display: block;
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 
-  &__col {
+    &__col {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        height: 200px;
+
+        background-color: $dark;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        border: 2px solid $light;
+        width: 100%;
+
+        &--1 {
+            height: 400px;
+            background-image: url("../img/index-1.jpg");
+        }
+
+        &--2 {
+            background-image: url("../img/index-2.jpg");
+        }
+
+        &--3 {
+            height: 600px;
+            background-image: url("../img/bg-menu-page.png");
+            background-position: bottom;
+        }
+
+        &--4 {
+          background-color: $darken;
+        }
+
+        &--5 {
+          background-color: $dark;
+        }
+
+        &--6 {
+            height: 400px;
+            background-image: url("../img/index-6.jpg");
+            background-position: right;
+        }
+
+        &--7 {
+          background-color: $medium;
+        }
+
+        &--8 {
+          background-color: $dark;
+        }
+
+        &--9 {
+            background-image: url("../img/bg-cell-europe-afrique.png");
+
+        }
+
+        &--10 {
+            background-image: url("../img/bg-cell-visuel-avion.png");
+        }
+
+        &--11 {
+            background-image: url("../img/index-11.jpg");
+        }
+
+        &--12 {
+          background-color: $medium;
+        }
+
+        &--13 {
+            background-color: $lighten;
+            background-image: url("../img/cell-green-ops.png");
+        }
+
+        &--14 {
+            background-image: url("../img/index-14.jpg");
+        }
+
+        &--15 {
+          background-color: $medium;
+        }
+
+        &--16 {
+          background-image: url("../img/bg-cell-diplomatic.png");
+        }
+
+        &--17 {
+            background-image: url("../img/bg-cell-tour.png");
+        }
+
+        &--18 {
+            height: 400px;
+            background-color: $dark;
+        }
+
+        &--19 {
+            height: 400px;
+            background-image: url("../img/index-19.jpg");
+        }
+    }
+}
+
+.grid__link {
+  position: absolute;
     display: block;
-    min-height: 200px;
-    background-color: grey;
-    border: 2px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 15px;
+    margin: 0 auto;
+    top: 36%;
+    left: 0;
+    right: 0;
+
+    b {
+      font-size: 38px;
+      font-style: italic;
+      display: block;
+      padding-bottom: 20px;
+    }
+
+    span {
+      color: $lighten
+    }
+}
+
+.lang {
+  display: inline-block;
+  padding: 20px 5px;
+
+  &--active {
+    color: #e4b745;
+  }
+}
+
+@media #{$tablet-widths} {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+
+        &--1 {
+            width: calc(100% / 6);
+            flex-direction: column;
+        }
+
+        &--1a {
+            width: calc(100% / 6);
+        }
+
+        &--2 {
+            width: calc(100% / 3);
+        }
+
+        &--3 {
+            width: calc(100% / 3);
+        }
+
+        &--4 {
+            width: 50%;
+        }
+
+        &--5 {
+            width: 50%;
+        }
+
+        &__col {
+            width: 50%;
+
+            &--1 {
+                width: 100%;
+            }
+
+            &--2 {
+                // order: 1;
+                // transform: translateY(-200px);
+                width: 100%;
+            }
+
+            &--3 {
+                width: 100%;
+            }
+
+            &--4 {}
+
+            &--5 {}
+
+            &--6 {
+                width: 100%;
+            }
+
+            &--7 {}
+
+            &--8 {}
+
+            &--9 {}
+
+            &--10 {}
+
+            &--11 {}
+
+            &--12 {}
+
+            &--13 {
+                width: calc(100% / 3);
+            }
+
+            &--14 {
+                width: calc(100% / 3);
+            }
+
+            &--15 {
+                width: calc(100% / 3);
+            }
+
+            &--16 {
+                flex-grow: 1;
+            }
+
+            &--17 {
+                width: calc(100% / 3);
+            }
+
+            &--18 {}
+
+            &--18 {}
+        }
+    }
+
+    .grid__link {
+
+        b {
+          font-size: 20px;
+        }
+    }
+}
+
+@media #{$desktop-widths} {
+
+
+
+  .grid__link {
+
+      b {
+        font-size: 38px;
+      }
   }
 }
