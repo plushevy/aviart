@@ -16,10 +16,6 @@ a {
     text-decoration: none;
     outline: none;
     color: $light;
-
-    &:hover {
-        opacity: 0.6;
-    }
 }
 @media #{$tablet-widths} {
     body {
