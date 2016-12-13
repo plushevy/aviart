@@ -23,10 +23,11 @@
 
         border: 2px solid $light;
         width: 100%;
+
 //hover только у непустых
         &:not(:empty):hover {
                     opacity: 0.9;
-                    animation: pulse 0.6s ease-in;
+                    /*animation: pulse 0.6s ease-in;*/
 
                     .grid__link {
                       transition: all 0.3s ease-in;
@@ -80,6 +81,9 @@
 
         &--8 {
           background-color: $dark;
+          &:hover {
+            opacity: none;
+          }
         }
 
         &--9 {

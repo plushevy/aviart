@@ -36,6 +36,13 @@
   &__subtitle3 {
     font-size: 20px;
   }
+
+  a {
+    color: $medium;
+    &:hover {
+      color: $darken;
+    }
+  }
 }
 
 .aviart24 {
@@ -53,6 +60,19 @@
 //   font-weight: bold;
 // }
 
+
+.contacts-block {
+  font-size: 18px;
+  color: $lighten;
+  text-align: center;
+  margin-top: 20%;
+
+  a {
+    &:hover {
+      color: #e4b745;
+    }
+  }
+}
 
 
 

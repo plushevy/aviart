@@ -16,12 +16,14 @@
 
     a {
       transition: all 0.1s;
+      &:hover {
+        color: $lighten;
+        opacity: 1;
+        font-size: 25px;
+      }
     }
 
-    &:hover {
-      color: $lighten;
-      opacity: 1;
-    }
+
 
     &--active a{
       color: $medium;

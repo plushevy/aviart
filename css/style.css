@@ -84,7 +84,7 @@ a {
     width: 100%; }
     .grid__col:not(:empty):hover {
       opacity: 0.9;
-      animation: pulse 0.6s ease-in; }
+      /*animation: pulse 0.6s ease-in;*/ }
       .grid__col:not(:empty):hover .grid__link {
         transition: all 0.3s ease-in;
         color: #a6d0ef;
@@ -112,6 +112,8 @@ a {
       background-color: #4a91bb; }
     .grid__col--8 {
       background-color: #01234c; }
+      .grid__col--8:hover {
+        opacity: none; }
     .grid__col--9 {
       background-image: url("../img/bg-cell-europe-afrique.png"); }
     .grid__col--10 {
@@ -289,10 +291,22 @@ a {
     font-size: 22px; }
   .right__subtitle3 {
     font-size: 20px; }
+  .right a {
+    color: #4a91bb; }
+    .right a:hover {
+      color: #014b60; }
 
 .aviart24 {
   color: #a6d0ef;
   font-weight: bold; }
+
+.contacts-block {
+  font-size: 18px;
+  color: #a6d0ef;
+  text-align: center;
+  margin-top: 20%; }
+  .contacts-block a:hover {
+    color: #e4b745; }
 
 @media (min-width: 768px) {
   .left {
@@ -400,9 +414,10 @@ a {
     margin: 12px 0; }
     .menu__link a {
       transition: all 0.1s; }
-    .menu__link:hover {
-      color: #a6d0ef;
-      opacity: 1; }
+      .menu__link a:hover {
+        color: #a6d0ef;
+        opacity: 1;
+        font-size: 25px; }
     .menu__link--active a {
       color: #4a91bb; }
 
