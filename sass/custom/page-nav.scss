@@ -1,0 +1,40 @@
+.page-nav {
+  position: absolute;
+  margin: 10% auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__link {
+    margin: 12px 0;
+
+    a {
+      transition: all 0.1s;
+      &:hover {
+        color: $lighten;
+        opacity: 1;
+        // font-size: 25px;
+      }
+    }
+
+
+
+    &--active a{
+      color: $medium;
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .page-nav {
+    margin: 20% auto;
+  }
+}
+@media #{$desktop-widths} {
+}

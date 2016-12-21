@@ -1,0 +1,72 @@
+
+.toggle-checkbox {
+  display: none;
+}
+
+// рисуем гамбургер
+.hamburger {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 0;
+  z-index: 10;
+
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 22px;
+    height: 2px;
+
+    background-color: black;
+    box-shadow: 0 7px 0 0 black,
+                0 14px 0 0 black;
+  }
+
+}
+
+#menu-toggle:checked ~ .overlay {
+  // transform: translateX(0);
+  left: 0;
+}
+
+// Крестик
+
+#menu-toggle:checked + .hamburger {
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 10;
+
+    width: 27px;
+    height: 2px;
+
+    background-color: black;
+  }
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media #{$tablet-widths} {}
+@media #{$desktop-widths} {}
